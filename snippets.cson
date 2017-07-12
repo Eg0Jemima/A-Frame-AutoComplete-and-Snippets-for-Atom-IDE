@@ -1,0 +1,309 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.text.html':
+#A-Frame AutoComplete Useful Functions
+    'Get A-Frame World Rotation':
+      'prefix': 'getWorldRotation()'
+      'body': 'getWorldRotation()'
+    'Get A-Frame Local to World':
+      'prefix': 'localToWorld(vector)'
+      'body': 'localToWorld(vector)'
+    'Get A-Frame World Quaternion':
+      'prefix': 'getWorldQuaternion()'
+      'body': 'getWorldQuaternion()'
+    'Get A-Frame World Scale':
+      'prefix': 'getWorldScale()'
+      'body': 'getWorldScale()'
+    'A-Frame Query Selector':
+      'prefix': 'query'
+      'body': 'querySelector("")'
+    'A-Frame Query Selector All':
+      'prefix': 'querySelector("")'
+      'body': 'querySelector("")'
+    'A-Frame Create Element':
+      'prefix': 'createElement("")'
+      'body': 'createElement("")'
+    'A-Frame Append Child':
+      'prefix': 'appendChild(entityVar)'
+      'body': 'createElement(entityVar)'
+    'A-Frame Remove Child':
+        'prefix': 'removeChild(entityVar)'
+        'body': 'removeChild(entityVar)'
+    'A-Frame Set Attribute (componentName, data)':
+        'prefix': 'setAttribute("", dataObject)'
+        'body': 'setAttribute("", dataObject)'
+    'A-Frame Set Attribute (componentName, propertyName, propertyValue)':
+        'prefix': 'setAttribute("", "propertyName", "propertyValue")'
+        'body': 'setAttribute("", "propertyName", "propertyValue")'
+    'A-Frame Remove Attribute':
+        'prefix': 'removeAttribute("")'
+        'body': 'removeAttribute("")'
+    'A-Frame Emit Event':
+        'prefix': 'emit("", dataObject, bool)'
+        'body': 'emit("", dataObject, bool)'
+    'A-Frame Add Event Listener':
+        'prefix': 'addEventListener("", function)'
+        'body': 'addEventListener("", function)'
+    'A-Frame Remove Event Listener':
+        'prefix': 'removeEventListener("", function)'
+        'body': 'removeEventListener("", function)'
+    'A-Frame Get Scene Element From Entity':
+        'prefix': 'sceneEl'
+        'body': 'sceneEl'
+    'A-Frame Get Three.js Object Property':
+        'prefix': 'object3D'
+        'body': 'object3D'
+    'A-Frame Get Three.js Map Object':
+        'prefix': 'object3DMap'
+        'body': 'object3DMap'
+    'A-Frame Get Three.js Object Function':
+        'prefix': 'getObject3D("")'
+        'body': 'getObject3D("")'
+    'A-Frame Set Three.js Object Function':
+        'prefix': 'setObject3D("", 3jdObject)'
+        'body': 'setObject3D("", 3jsObject)'
+    'A-Frame Remove Three.js Object Function':
+        'prefix': 'removeObject3D("")'
+        'body': 'removeObject3D("")'
+
+#A-Frame Useful Snippets
+    'Plain Old Aframe Object':
+        'prefix': 'poao'
+        'body': """AFRAME.registerComponent('foo', {
+              schema: {
+                event: {type: 'string', default: ''},
+                message: {type: 'string', default: 'Hello, World!'}
+              },
+              init: function () {
+                // Do something when component first attached.
+              },
+              update: function () {
+                // Do something when component's data is updated.
+              },
+              remove: function () {
+                // Do something the component or its entity is detached.
+              },
+              tick: function (time, timeDelta) {
+                // Do something on every scene tick or frame.
+              }
+            });"""
+
+#A-Frame Object Snippets
+    'A-Frame Animation':
+        'prefix': 'aanimation'
+        'body': '<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>'
+    'A-Frame Mixin':
+        'prefix': 'amixin'
+        'body': '<a-mixin id="red" material="color: red"></a-mixin>'
+    'A-Frame Asset':
+        'prefix': 'aasset'
+        'body': '<a-asset></a-asset>'
+    'A-Frame Asset Item':
+        'prefix': 'aassetitem'
+        'body': '<a-asset-item id="horse-obj" src="horse.obj"></a-asset-item>'
+    'A-Frame Box':
+        'prefix': 'abox'
+        'body': '<a-box depth="2" height="4" width="0.5"></a-box>'
+    'A-Frame Positionable Camera':
+        'prefix': 'acamera'
+        'body': """<a-entity position="0 0 0">
+                        <a-camera></a-camera>
+                   </a-entity>"""
+    'A-Frame Circle':
+        'prefix': 'acircle'
+        'body': '<a-circle radius="50" rotation="-90 0 0"></a-circle>'
+    'A-Frame Collada Model':
+        'prefix': 'acollada'
+        'body': '<a-collada-model src="#tree"></a-collada-model>'
+    'A-Frame GLTF Model':
+        'prefix': 'agltf'
+        'body': '<a-gltf-model src="#tree"></a-gltf-model>'
+    'A-Frame OBJ Model':
+        'prefix': 'aobj'
+        'body': '<a-obj-model src="#tree"></a-obj-model>'
+    'A-Frame Cone':
+        'prefix': 'acone'
+        'body': '<a-cone color="tomato" radius-bottom="2" radius-top="0.5"></a-cone>'
+    'A-Frame Cursor (Must be child of a-camera)':
+        'prefix': 'acursor'
+        'body': '<a-cursor></a-cursor>'
+    'A-Frame Curved Image':
+        'prefix': 'acurvedimage'
+        'body': '<a-curvedimage src="#my-image" height="3.0" radius="5.7" theta-length="72" rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage>'
+    'A-Frame Cylinder':
+        'prefix': 'acylinder'
+        'body': '<a-cylinder color="yellow" height="3" radius="1.5" theta-start="50" theta-length="280" side="double" segments-radial="8" open-ended="true"></a-cylinder>'
+    'A-Frame Dodecahedron':
+        'prefix': 'adodecahedron'
+        'body': '<a-dodecahedron color="#FF926B" radius="5"></a-dodecahedron>'
+    'A-Frame Icosahedron':
+        'prefix': 'aicosahedron'
+        'body': '<a-icosahedron color="#FF926B" radius="5"></a-icosahedron>'
+    'A-Frame Octahedron':
+        'prefix': 'aoctahedron'
+        'body': '<a-octahedron color="#FF926B" radius="5"></a-octahedron>'
+    'A-Frame Tetrahedron':
+        'prefix': 'atetrahedron'
+        'body': '<a-tetrahedron color="#FF926B" radius="5"></a-tetrahedron>'
+    'A-Frame Image':
+        'prefix': 'aimage'
+        'body': '<a-image src="#my-image"></a-image>'
+    'A-Frame Directional Light':
+        'prefix': 'adirectionallight'
+        'body': '<a-light color="blue" position="0 5 0"></a-light>'
+    'A-Frame Point Light':
+        'prefix': 'apointlight'
+        'body': '<a-light type="point" color="blue" position="0 5 0"></a-light>'
+    'A-Frame Ambient Light':
+        'prefix': 'aambientlight'
+        'body': '<a-light type="ambient" color="blue" position="0 5 0"></a-light>'
+    'A-Frame Link':
+        'prefix': 'alink'
+        'body': '<a-link href=index.html></a-link>'
+    'A-Frame Plane':
+        'prefix': 'aplane'
+        'body': '<a-plane height="100" width="100" rotation="-90 0 0"></a-plane>'
+    'A-Frame Ring':
+        'prefix': 'aring'
+        'body': '<a-ring color="teal" radius-inner="1" radius-outer="2"></a-ring>'
+    'A-Frame Sky':
+        'prefix': 'asky'
+        'body': '<a-sky color="#6EBAA7"></a-sky>'
+    'A-Frame Sound':
+        'prefix': 'asound'
+        'body': '<a-sound src="src: url(click.mp3)" autoplay="true" position="0 2 5"></a-sound>'
+    'A-Frame Sphere':
+        'prefix': 'asphere'
+        'body': '<a-sphere color="yellow" radius="5"></a-sphere>'
+    'A-Frame Text':
+        'prefix': 'atext'
+        'body': '<a-text value="Hello, World!"></a-text>'
+    'A-Frame Torus Knot':
+        'prefix': 'atorusknot'
+        'body': '<a-torus-knot color="#B84A39" arc="180" p="2" q="7" radius="5" radius-tubular="0.1"></a-torus-knot>'
+    'A-Frame Torus':
+        'prefix': 'atorus'
+        'body': '<a-torus color="#43A367" arc="270" radius="5" radius-tubular="0.1"></a-torus>'
+    'A-Frame Triangle':
+        'prefix': 'atriangle'
+        'body': '<a-triangle color="blue" rotation="-90 0 0"></a-triangle>'
+    'A-Frame Video':
+        'prefix': 'avideo'
+        'body': """<a-assets>
+                        <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
+                   </a-assets>
+                   <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>"""
+    'A-Frame VideoSphere':
+        'prefix': 'avideosphere'
+        'body': """<a-assets>
+                        <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
+                   </a-assets>
+                   <a-videosphere src="#penguin-sledding"></a-videosphere>"""
+
+'.source.js':
+#A-Frame AutoComplete Useful Functions
+    'Get A-Frame World Rotation':
+        'prefix': 'getWorldRotation()'
+        'body': 'getWorldRotation()'
+    'Get A-Frame Local to World':
+        'prefix': 'localToWorld(vector)'
+        'body': 'localToWorld(vector)'
+    'Get A-Frame World Quaternion':
+        'prefix': 'getWorldQuaternion()'
+        'body': 'getWorldQuaternion()'
+    'Get A-Frame World Scale':
+        'prefix': 'getWorldScale()'
+        'body': 'getWorldScale()'
+    'A-Frame Query Selector':
+        'prefix': 'query'
+        'body': 'querySelector("")'
+    'A-Frame Query Selector All':
+        'prefix': 'querySelector("")'
+        'body': 'querySelector("")'
+    'A-Frame Create Element':
+        'prefix': 'createElement("")'
+        'body': 'createElement("")'
+    'A-Frame Append Child':
+        'prefix': 'appendChild(entityVar)'
+        'body': 'createElement(entityVar)'
+    'A-Frame Remove Child':
+        'prefix': 'removeChild(entityVar)'
+        'body': 'removeChild(entityVar)'
+    'A-Frame Set Attribute (componentName, data)':
+        'prefix': 'setAttribute("", dataObject)'
+        'body': 'setAttribute("", dataObject)'
+    'A-Frame Set Attribute (componentName, propertyName, propertyValue)':
+        'prefix': 'setAttribute("", "propertyName", "propertyValue")'
+        'body': 'setAttribute("", "propertyName", "propertyValue")'
+    'A-Frame Remove Attribute':
+        'prefix': 'removeAttribute("")'
+        'body': 'removeAttribute("")'
+    'A-Frame Emit Event':
+        'prefix': 'emit("", dataObject, bool)'
+        'body': 'emit("", dataObject, bool)'
+    'A-Frame Add Event Listener':
+        'prefix': 'addEventListener("", function)'
+        'body': 'addEventListener("", function)'
+    'A-Frame Remove Event Listener':
+        'prefix': 'removeEventListener("", function)'
+        'body': 'removeEventListener("", function)'
+    'A-Frame Get Scene Element From Entity':
+        'prefix': 'sceneEl'
+        'body': 'sceneEl'
+    'A-Frame Get Three.js Object Property':
+        'prefix': 'object3D'
+        'body': 'object3D'
+    'A-Frame Get Three.js Map Object':
+        'prefix': 'object3DMap'
+        'body': 'object3DMap'
+    'A-Frame Get Three.js Object Function':
+        'prefix': 'getObject3D("")'
+        'body': 'getObject3D("")'
+    'A-Frame Set Three.js Object Function':
+        'prefix': 'setObject3D("", 3jdObject)'
+        'body': 'setObject3D("", 3jsObject)'
+    'A-Frame Remove Three.js Object Function':
+        'prefix': 'removeObject3D("")'
+        'body': 'removeObject3D("")'
+
+#A-Frame Useful Snippets
+    'Plain Old Aframe Object':
+        'prefix': 'poao'
+        'body': """AFRAME.registerComponent('foo', {
+                schema: {
+                  event: {type: 'string', default: ''},
+                  message: {type: 'string', default: 'Hello, World!'}
+                },
+                init: function () {
+                  // Do something when component first attached.
+                },
+                update: function () {
+                  // Do something when component's data is updated.
+                },
+                remove: function () {
+                  // Do something the component or its entity is detached.
+                },
+                tick: function (time, timeDelta) {
+                  // Do something on every scene tick or frame.
+                }
+              });"""
