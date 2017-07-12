@@ -87,28 +87,67 @@
         'body': 'removeObject3D("")'
 
 #A-Frame Useful Snippets
-    'Plain Old Aframe Object':
+    'Plain Old A-Frame Object':
         'prefix': 'poao'
-        'body': """AFRAME.registerComponent('foo', {
-              schema: {
-                event: {type: 'string', default: ''},
-                message: {type: 'string', default: 'Hello, World!'}
-              },
-              init: function () {
-                // Do something when component first attached.
-              },
-              update: function () {
-                // Do something when component's data is updated.
-              },
-              remove: function () {
-                // Do something the component or its entity is detached.
-              },
-              tick: function (time, timeDelta) {
-                // Do something on every scene tick or frame.
-              }
-            });"""
+        'body': """
+                AFRAME.registerComponent('foo', {
+                    schema: {
+                        event: {type: 'string', default: ''},
+                        message: {type: 'string', default: 'Hello, World!'}
+                    },
+                    init: function () {
+                        // Do something when component first attached.
+                    },
+                    update: function () {
+                        // Do something when component's data is updated.
+                    },
+                    remove: function () {
+                        // Do something the component or its entity is detached.
+                    },
+                    tick: function (time, timeDelta) {
+                        // Do something on every scene tick or frame.
+                    }
+                });
+                """
+
+    'Plain Old A-Frame Primitive':
+        'prefix': 'poap'
+        'body': """
+                AFRAME.registerPrimitive('a-foo', {
+                    defaultComponents: {
+                    geometry: {
+                        primitive: 'tetrahedron',
+                            height: 1.5,
+                            depth: 0.2,
+                            width: 3.5
+                        },
+                        material: {
+                            opacity: 1.0,
+                            transparent: false,
+                            side: 'Double',
+                            color: '#8450ff'
+                        },
+                        position: {
+                            x: 0,
+                            y: 0,
+                            z: -5
+                        },
+                    },
+                    mappings: {
+                        height: 'geometry.height',
+                        width: 'geometry.width',
+                        depth: 'geometry.depth',
+                        color: 'material.color',
+                        opacity: 'material.opacity',
+                        position: 'position'
+                    }
+                });
+                """
 
 #A-Frame Object Snippets
+    'A-Frame Entity':
+        'prefix': 'aentity'
+        'body': '<a-entity></a-entity>'
     'A-Frame Animation':
         'prefix': 'aanimation'
         'body': '<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>'
@@ -126,9 +165,11 @@
         'body': '<a-box depth="2" height="4" width="0.5"></a-box>'
     'A-Frame Positionable Camera':
         'prefix': 'acamera'
-        'body': """<a-entity position="0 0 0">
-                        <a-camera></a-camera>
-                   </a-entity>"""
+        'body': """
+                <a-entity position="0 0 0">
+                    <a-camera></a-camera>
+                </a-entity>
+                """
     'A-Frame Circle':
         'prefix': 'acircle'
         'body': '<a-circle radius="50" rotation="-90 0 0"></a-circle>'
@@ -209,16 +250,20 @@
         'body': '<a-triangle color="blue" rotation="-90 0 0"></a-triangle>'
     'A-Frame Video':
         'prefix': 'avideo'
-        'body': """<a-assets>
-                        <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
-                   </a-assets>
-                   <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>"""
+        'body': """
+                <a-assets>
+                    <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
+                </a-assets>
+                <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+                """
     'A-Frame VideoSphere':
         'prefix': 'avideosphere'
-        'body': """<a-assets>
-                        <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
-                   </a-assets>
-                   <a-videosphere src="#penguin-sledding"></a-videosphere>"""
+        'body': """
+                <a-assets>
+                    <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
+                </a-assets>
+                <a-videosphere src="#penguin-sledding"></a-videosphere>
+                """
 
 '.source.js':
 #A-Frame AutoComplete Useful Functions
@@ -287,23 +332,59 @@
         'body': 'removeObject3D("")'
 
 #A-Frame Useful Snippets
-    'Plain Old Aframe Object':
+    'Plain Old A-Frame Object':
         'prefix': 'poao'
-        'body': """AFRAME.registerComponent('foo', {
-                schema: {
-                  event: {type: 'string', default: ''},
-                  message: {type: 'string', default: 'Hello, World!'}
-                },
-                init: function () {
-                  // Do something when component first attached.
-                },
-                update: function () {
-                  // Do something when component's data is updated.
-                },
-                remove: function () {
-                  // Do something the component or its entity is detached.
-                },
-                tick: function (time, timeDelta) {
-                  // Do something on every scene tick or frame.
-                }
-              });"""
+        'body': """
+                AFRAME.registerComponent('foo', {
+                    schema: {
+                        event: {type: 'string', default: ''},
+                        message: {type: 'string', default: 'Hello, World!'}
+                    },
+                    init: function () {
+                        // Do something when component first attached.
+                    },
+                    update: function () {
+                        // Do something when component's data is updated.
+                    },
+                    remove: function () {
+                        // Do something the component or its entity is detached.
+                    },
+                    tick: function (time, timeDelta) {
+                        // Do something on every scene tick or frame.
+                    }
+                });
+                """
+
+    'Plain Old A-Frame Primitive':
+        'prefix': 'poap'
+        'body': """
+                AFRAME.registerPrimitive('a-foo', {
+                    defaultComponents: {
+                    geometry: {
+                        primitive: 'tetrahedron',
+                            height: 1.5,
+                            depth: 0.2,
+                            width: 3.5
+                        },
+                        material: {
+                            opacity: 1.0,
+                            transparent: false,
+                            side: 'Double',
+                            color: '#8450ff'
+                        },
+                        position: {
+                            x: 0,
+                            y: 0,
+                            z: -5
+                        },
+                    },
+                    mappings: {
+                        height: 'geometry.height',
+                        width: 'geometry.width',
+                        depth: 'geometry.depth',
+                        color: 'material.color',
+                        opacity: 'material.opacity',
+                        position: 'position'
+                    }
+                });
+                """
