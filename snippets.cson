@@ -45,7 +45,7 @@
       'body': 'createElement("")'
     'A-Frame Append Child':
       'prefix': 'appendChild(entityVar)'
-      'body': 'createElement(entityVar)'
+      'body': 'appendChild(entityVar)'
     'A-Frame Remove Child':
         'prefix': 'removeChild(entityVar)'
         'body': 'removeChild(entityVar)'
@@ -317,7 +317,7 @@
         'body': 'createElement("")'
     'A-Frame Append Child':
         'prefix': 'appendChild(entityVar)'
-        'body': 'createElement(entityVar)'
+        'body': 'appendChild(entityVar)'
     'A-Frame Remove Child':
         'prefix': 'removeChild(entityVar)'
         'body': 'removeChild(entityVar)'
