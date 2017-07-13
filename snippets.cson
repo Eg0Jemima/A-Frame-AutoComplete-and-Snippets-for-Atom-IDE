@@ -35,11 +35,11 @@
       'prefix': 'getWorldScale()'
       'body': 'getWorldScale()'
     'A-Frame Query Selector':
-      'prefix': 'query'
-      'body': 'querySelector("")'
-    'A-Frame Query Selector All':
       'prefix': 'querySelector("")'
       'body': 'querySelector("")'
+    'A-Frame Query Selector All':
+      'prefix': 'querySelectorAll("")'
+      'body': 'querySelectorAll("")'
     'A-Frame Create Element':
       'prefix': 'createElement("")'
       'body': 'createElement("")'
@@ -62,11 +62,19 @@
         'prefix': 'emit("", dataObject, bool)'
         'body': 'emit("", dataObject, bool)'
     'A-Frame Add Event Listener':
-        'prefix': 'addEventListener("", function)'
-        'body': 'addEventListener("", function)'
+        'prefix': 'addEventListener("", function())'
+        'body': """
+                addEventListener("", function(){
+
+                });
+                """
     'A-Frame Remove Event Listener':
         'prefix': 'removeEventListener("", function)'
-        'body': 'removeEventListener("", function)'
+        'body': """
+                removeEventListener("", function(){
+
+                });
+                """
     'A-Frame Get Scene Element From Entity':
         'prefix': 'sceneEl'
         'body': 'sceneEl'
@@ -296,11 +304,11 @@
         'prefix': 'getWorldScale()'
         'body': 'getWorldScale()'
     'A-Frame Query Selector':
-        'prefix': 'query'
-        'body': 'querySelector("")'
-    'A-Frame Query Selector All':
         'prefix': 'querySelector("")'
         'body': 'querySelector("")'
+    'A-Frame Query Selector All':
+        'prefix': 'querySelectorAll("")'
+        'body': 'querySelectorAll("")'
     'A-Frame Create Element':
         'prefix': 'createElement("")'
         'body': 'createElement("")'
@@ -323,11 +331,19 @@
         'prefix': 'emit("", dataObject, bool)'
         'body': 'emit("", dataObject, bool)'
     'A-Frame Add Event Listener':
-        'prefix': 'addEventListener("", function)'
-        'body': 'addEventListener("", function)'
+        'prefix': 'addEventListener("", function())'
+        'body': """
+                addEventListener("", function(){
+
+                });
+                """
     'A-Frame Remove Event Listener':
         'prefix': 'removeEventListener("", function)'
-        'body': 'removeEventListener("", function)'
+        'body': """
+                removeEventListener("", function(){
+
+                });
+                """
     'A-Frame Get Scene Element From Entity':
         'prefix': 'sceneEl'
         'body': 'sceneEl'
