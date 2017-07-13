@@ -75,7 +75,10 @@
 
                 });
                 """
-    'A-Frame Get Scene Element From Entity':
+    'A-Frame Get Current HTML Element Object':
+        'prefix': 'el'
+        'body': 'el'
+    'A-Frame Get Scene Element Object From Entity':
         'prefix': 'sceneEl'
         'body': 'sceneEl'
     'A-Frame Get Three.js Object Property':
@@ -344,6 +347,9 @@
 
                 });
                 """
+    'A-Frame Get Current HTML Element Object':
+        'prefix': 'el'
+        'body': 'el'
     'A-Frame Get Scene Element From Entity':
         'prefix': 'sceneEl'
         'body': 'sceneEl'
