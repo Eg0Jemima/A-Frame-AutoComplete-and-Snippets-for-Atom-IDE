@@ -167,9 +167,12 @@
     'A-Frame Mixin':
         'prefix': 'amixin'
         'body': '<a-mixin id="red" material="color: red"></a-mixin>'
-    'A-Frame Asset':
-        'prefix': 'aasset'
-        'body': '<a-asset></a-asset>'
+    'A-Frame Assets':
+        'prefix': 'aassets'
+        'body': """
+                <a-assets>
+                </a-assets>
+                """
     'A-Frame Asset Item':
         'prefix': 'aassetitem'
         'body': '<a-asset-item id="horse-obj" src="horse.obj"></a-asset-item>'
