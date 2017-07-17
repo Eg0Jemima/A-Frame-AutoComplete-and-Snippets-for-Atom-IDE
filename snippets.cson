@@ -49,6 +49,9 @@
     'A-Frame Remove Child':
         'prefix': 'removeChild(entityVar)'
         'body': 'removeChild(entityVar)'
+    'A-Frame Get Attribute (componentName)':
+        'prefix': 'getAttribute("")'
+        'body': 'getAttribute("")'
     'A-Frame Set Attribute (componentName, data)':
         'prefix': 'setAttribute("", dataObject)'
         'body': 'setAttribute("", dataObject)'
@@ -321,6 +324,9 @@
     'A-Frame Remove Child':
         'prefix': 'removeChild(entityVar)'
         'body': 'removeChild(entityVar)'
+    'A-Frame Get Attribute (componentName)':
+        'prefix': 'getAttribute("")'
+        'body': 'getAttribute("")'
     'A-Frame Set Attribute (componentName, data)':
         'prefix': 'setAttribute("", dataObject)'
         'body': 'setAttribute("", dataObject)'
