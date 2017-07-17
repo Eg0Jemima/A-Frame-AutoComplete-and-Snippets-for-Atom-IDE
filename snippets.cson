@@ -99,6 +99,12 @@
     'A-Frame Remove Three.js Object Function':
         'prefix': 'removeObject3D("")'
         'body': 'removeObject3D("")'
+    'A-Frame Add State (stateName)':
+        'prefix': 'addState("")'
+        'body': 'addState("")'
+    'A-Frame Remove State (stateName)':
+        'prefix': 'removeState("")'
+        'body': 'removeState("")'
 
 #A-Frame Useful Snippets
     'Minimal A-Frame HTML':
@@ -172,6 +178,12 @@
                 """
 
 #A-Frame Object Snippets
+    'A-Frame Scene':
+        'prefix': 'ascene'
+        'body': """
+                <a-scene>
+                </a-scene>
+                """
     'A-Frame Entity':
         'prefix': 'aentity'
         'body': '<a-entity></a-entity>'
@@ -374,6 +386,12 @@
     'A-Frame Remove Three.js Object Function':
         'prefix': 'removeObject3D("")'
         'body': 'removeObject3D("")'
+    'A-Frame Add State (stateName)':
+        'prefix': 'addState("")'
+        'body': 'addState("")'
+    'A-Frame Remove State (stateName)':
+        'prefix': 'removeState("")'
+        'body': 'removeState("")'
 
 #A-Frame Useful Snippets
     'Plain Old A-Frame Object':
