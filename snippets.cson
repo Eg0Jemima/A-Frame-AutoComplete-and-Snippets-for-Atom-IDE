@@ -120,8 +120,8 @@
                     </body>
                 </html>
                 """
-    'Plain Old A-Frame Object':
-        'prefix': 'poao'
+    'Plain Old A-Frame Component':
+        'prefix': 'poac'
         'body': """
                 AFRAME.registerComponent('foo', {
                     schema: {
@@ -139,6 +139,24 @@
                     },
                     tick: function (time, timeDelta) {
                         // Do something on every scene tick or frame.
+                    }
+                });
+                """
+
+    'Plain Old A-Frame System':
+        'prefix': 'poas'
+        'body': """
+                AFRAME.registerSystem('my-component', {
+                    schema: {},  // System schema. Parses into `this.data`.
+                    init: function () {
+                        // Called on scene initialization.
+                    },
+                        // Other handlers and methods.
+                    });
+
+                AFRAME.registerComponent('my-component', {
+                    init: function () {
+                        console.log(this.system);
                     }
                 });
                 """
@@ -413,8 +431,8 @@
         'body': 'removeState("")'
 
 #A-Frame Useful Snippets
-    'Plain Old A-Frame Object':
-        'prefix': 'poao'
+    'Plain Old A-Frame Component':
+        'prefix': 'poac'
         'body': """
                 AFRAME.registerComponent('foo', {
                     schema: {
@@ -432,6 +450,24 @@
                     },
                     tick: function (time, timeDelta) {
                         // Do something on every scene tick or frame.
+                    }
+                });
+                """
+
+    'Plain Old A-Frame System':
+        'prefix': 'poas'
+        'body': """
+                AFRAME.registerSystem('my-component', {
+                    schema: {},  // System schema. Parses into `this.data`.
+                    init: function () {
+                        // Called on scene initialization.
+                    },
+                        // Other handlers and methods.
+                    });
+
+                AFRAME.registerComponent('my-component', {
+                    init: function () {
+                        console.log(this.system);
                     }
                 });
                 """
