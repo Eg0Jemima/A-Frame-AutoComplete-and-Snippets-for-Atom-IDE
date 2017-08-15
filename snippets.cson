@@ -238,7 +238,7 @@
                 """
     'A-Frame Asset Item':
         'prefix': 'aassetitem'
-        'body': '<a-asset-item id="horse-obj" src="horse.obj"></a-asset-item>'
+        'body': '<a-asset-item id="horse-obj" src="horse.obj" crossorigin="true"></a-asset-item>'
     'A-Frame Box':
         'prefix': 'abox'
         'body': '<a-box depth="2" height="4" width="0.5"></a-box>'
