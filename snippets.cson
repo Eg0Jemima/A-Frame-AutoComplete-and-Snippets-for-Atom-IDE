@@ -81,6 +81,9 @@
     'A-Frame Get Current HTML Element Object':
         'prefix': 'el'
         'body': 'el'
+    'A-Frame Get Parent HTML Element Object':
+        'prefix': 'parentEl'
+        'body': 'parentEl'
     'A-Frame Get Scene Element Object From Entity':
         'prefix': 'sceneEl'
         'body': 'sceneEl'
@@ -405,6 +408,9 @@
     'A-Frame Get Current HTML Element Object':
         'prefix': 'el'
         'body': 'el'
+    'A-Frame Get Parent HTML Element Object':
+        'prefix': 'parentEl'
+        'body': 'parentEl'
     'A-Frame Get Scene Element From Entity':
         'prefix': 'sceneEl'
         'body': 'sceneEl'
